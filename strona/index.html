@@ -5,12 +5,12 @@
   <meta charset="UTF-8" />
   <title>Słodkie bobry</title>
   <link rel="stylesheet" href="styles.css" />
+  <script defer src="scripts/main.js"></script>
 </head>
 
 <body>
   <div class="column">
-    <!-- Komentarz -->
-    <p>
+    <p id="bobr">
       <b>Bóbr europejski</b>[3], a także: bóbr zwyczajny, bóbr rzeczny, bóbr
       wschodni[4] (<i><u>Castor fiber</i></u>) – gatunek ziemnowodnego gryzonia z rodziny bobrowatych (Castoridae).
       Uważa się go za największego gryzonia Eurazji: masa ciała dorosłego
@@ -27,6 +27,10 @@
     </p>
 
     <p>Źródło:<a href="https://pl.wikipedia.org/wiki/B%C3%B3br_europejski">wikipedia</a></p>
+    <p> Kliknij mnie !</p>
+
+    <button onclick="nowyBobr()">Dodaj bobra</button>
+
     <table>
       <thead>
         <tr>
@@ -57,10 +61,16 @@
     </table>
   </div>
   <div class="column">
-    <p id="whatever">Fidel Castro</p>
+    <p id="whatever">Cokolwiek</p>
+    <div>Informacje o bobrze:</div>
+    <button onclick="dodajInformacje()">Dodaj informacje</button>
+    <div id="informacje"></div>
+    <img src="assets/bobr.jpg" alt="Zdjecie bobra">
   </div>
-  <img src="assets/bobr.jpg" alt="Zdjecie bobra">
-  <script src="scripts/main.js"></script>
+  <script type="text/javascript">
+    var par = document.getElementById("bobr");
+    par.innerHTML = "Załadowałem się z drugiego skryptu";
+  </script>
 </body>
 
 </html>
